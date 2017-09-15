@@ -1,0 +1,29 @@
+
+.header{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center; 
+}
+
+.inputContainer {
+    float: center;
+    margin-right: 100px;
+    
+    
+     
+}
+
+.inputBox{
+    position: relative;
+    left: 100px;
+    display: flex;
+    justify-content: center; 
+    
+}
+
+.inputVideo{
+    position: relative;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+}
