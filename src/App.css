@@ -1,8 +1,13 @@
-
+.app {
+    padding: 150px;
+    background-image: linear-gradient(-141deg, #E4165C 0%, #644AEA 100%);
+}
 .header{
-    margin-top: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center; 
+    font-size: 100px;
 }
 
 .inputContainer {
@@ -15,7 +20,6 @@
 
 .inputBox{
     position: relative;
-    left: 100px;
     display: flex;
     justify-content: center; 
     
@@ -23,7 +27,31 @@
 
 .inputVideo{
     position: relative;
-    left: 100px;
+    left: 50px;
     display: flex;
     justify-content: center;
+}
+.inputContainer{
+    padding:20px;
+}
+
+
+
+.click{
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    border-radius: 50px;
+    color: #000000;
+    font-size: 40px;
+    opacity: 0.3;
+}
+.dropDownContainer {
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    border-radius: 50px;
+    color: #000000;
+    font-size: 40px;
+    opacity: 0.5;
 }

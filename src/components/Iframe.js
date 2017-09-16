@@ -1,35 +1,18 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
-class Iframe extends Component {
-    constructor (){
-        super();
-        this.state = {
-            query:''
-        }
-    }
-    
-    render() {
-        const opts = {
-            height: '390',
-            width: '640',
-            playerVars: { // https://developers.google.com/youtube/player_parameters 
-              autoplay: 0
-            }
-          };
-       
-          return (
-            <YouTube
-              videoId="ePpPVE-GGJw"
-              opts={opts}
-              onReady={this._onReady}
-            />
-          );
-        }
-       
-        _onReady(event) {
-          // access to player in all event handlers via event.target 
-          event.target.pauseVideo();
-        }
-      }
+import axios from 'axios';
 
-      export default Iframe;
+
+class Iframe extends Component {
+  render(){
+    return ( 
+                        //엄마한테 받은 정보를 사용할때 propname!!!을 사용하기.
+      <div><YouTube videoId={this.props.updateVideoId}/></div>
+    );
+ 
+  }
+  }
+
+      
+  
+  export default Iframe;
