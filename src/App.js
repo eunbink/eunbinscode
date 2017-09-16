@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Box from './components/Box.js';
 import Iframe from './components/Iframe.js';
-import axios from 'axios';
+
 
 
 class App extends Component {
@@ -21,18 +21,8 @@ class App extends Component {
 
 
   
-componentDidMount(){
-  //make request to endpoint
-  // from endpoing make api articles request
-  // send back articles
-  axios.get(`https://newsapi.org/v1/articles?source=${'bbc-news'}&apiKey=ecc3d5a1e7a44a258f30a7e054a4ba49`)
-      .then((response)=>{ 
-        console.log(response)
-        this.setState({
-          articles:response.data.articles 
-        })
-      })    
-}
+
+
 //다른 컴포넌트가 알아야할 데이타 정보를 파라미터에 넣기.
 //엄마의 전화기. 전화기를 복사해서 딸들에게 준다.
             //전화기로 딸이 준 데이타를 파라미터로 정보를 받는다.
@@ -42,7 +32,6 @@ buttonValue (videoId) {
   this.setState({videoIdFromBox:videoId})
 
 }
-
 
 
 
