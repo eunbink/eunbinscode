@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 
 
-
+//엄마가 이 딸한테는 전화기를 받는 기능만 넣어서 보내줫다. 전화 걸 필요가없다.
 class Iframe extends Component {
   render(){
     return ( 

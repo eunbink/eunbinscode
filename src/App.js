@@ -3,7 +3,8 @@ import './App.css';
 import Box from './components/Box.js';
 import Iframe from './components/Iframe.js';
 
-
+//pass data from parent to child - props.
+//pass data from child to parent - callback and state of the parent..
 
 class App extends Component {
   constructor(){
@@ -13,10 +14,10 @@ class App extends Component {
       //value를 바꿀라면 setstate을 사용한다.
       //딸에게 받은 정보를 저장하는곳
       
-      videoIdFromBox:'Z2QTd54yU5o'
+      videoIdFromBox:'leE10vdvkho'
     };
 
-    this.buttonValue = this.buttonValue.bind(this);
+    this.getSelectedId = this.getSelectedId.bind(this);
   }
 
 
@@ -28,7 +29,7 @@ class App extends Component {
             //전화기로 딸이 준 데이타를 파라미터로 정보를 받는다.
             //딸이 받은 정보를 업데이트를 하는곳. state에 업데이트하려면 setstate 사용하기.
             //propertyname과 데이터이름.
-buttonValue (videoId) {
+getSelectedId (videoId) {
   this.setState({videoIdFromBox:videoId})
 
 }
@@ -48,8 +49,9 @@ buttonValue (videoId) {
 <div className='inputBox'><Iframe updateVideoId = {this.state.videoIdFromBox}/></div>
                                   {/* 엄마가 전화기를 건네준다. */}.
                                   {/* updateVideoId는 엄마가 만든 전화기 이름(props name) */}
-                                  {/* 프랍이 함수이기때문에 ()를 같이 보낸다 */}
-<div className='inputVideo'><Box updateVideoId = {this.buttonValue}/></div>
+                                  {/* ()랑 같이 전달하면 invoke가 되기때문에 function만 보내고 child 에서 invoke를한다. */}
+                                  {/* data 있는 곳에서 invoke하기. */}
+<div className='inputVideo'><Box updateVideoId = {this.getSelectedId}/></div>
         </div>
         </div>
     )
