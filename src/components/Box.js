@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
+
 //엄마가 딸한테 전화기로 다시 전화를 받아야되서 전회받고 걸수있는 기능을 집어넣어줫다.
 class Box extends Component {   
     constructor(){
@@ -17,9 +19,9 @@ class Box extends Component {
     }
 
     componentDidMount(){
-        axios.get('/api/videos').then(response => {
+        axios.get('/api/getvideos').then(response => {
             return this.setState({videoIds:response.data});
-            
+           
         })
     }
 
@@ -40,20 +42,36 @@ class Box extends Component {
 
     render() {
         return (
-            <div className="inputContainer">
-                <select className="dropDownContainer" onChange={ (e) => { this.videoSelected(e.target.value) } }>
+            <div className="inputContainer" >
+                    <select className="dropDownContainer1" onChange={ (e) => { this.videoSelected(e.target.value) } }>
+                <option value={this.state.videoIds.video1}> THRILLER </option>
                 <option value={this.state.videoIds.video1}> VIDEO1 </option>
                 <option value={this.state.videoIds.video2}> VIDEO2</option>
                 <option value={this.state.videoIds.video3}> VIDEO3 </option>
+                </select>
+                 <select className="dropDownContainer2" onChange={ (e) => { this.videoSelected(e.target.value) } }>
+                 <option value={this.state.videoIds.video4}> COMEDY </option>
                 <option value={this.state.videoIds.video4}> VIDEO4 </option>
                 <option value={this.state.videoIds.video5}> VIDEO5</option>
                 <option value={this.state.videoIds.video6}> VIDEO6 </option>
+                </select>
+                <select className="dropDownContainer3" onChange={ (e) => { this.videoSelected(e.target.value) } }>
+                <option value={this.state.videoIds.video7}> ROMANCE </option>
                 <option value={this.state.videoIds.video7}> VIDEO7 </option>
                 <option value={this.state.videoIds.video8}> VIDEO8 </option>
                 <option value={this.state.videoIds.video9}> VIDEO9 </option>
+                </select>
+                <select className="dropDownContainer4" onChange={ (e) => { this.videoSelected(e.target.value) } }>
+                <option value={this.state.videoIds.video10}> KIDS </option>
                 <option value={this.state.videoIds.video10}> VIDEO10</option>
-            </select>
-                <button className='click' onClick ={ () => this.clickButton() }>CLICK</button>                
+                <option value={this.state.videoIds.video11}> VIDEO11</option>
+                <option value={this.state.videoIds.video12}> VIDEO12</option>
+
+                </select>
+                 
+               
+            
+            <button className='click' onClick ={ () => this.clickButton() }>CLICK</button>                
             </div>
         );
     }

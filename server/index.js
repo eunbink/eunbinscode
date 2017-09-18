@@ -7,21 +7,24 @@ const app = express();
 app.use( bodyParser.json() );
 
 const videoUrls = {
-    video1:'leE10vdvkho',
-    video2:'Z2QTd54yU5o',
-    video3:'W4-BFmkPPt4',
-    video4:'tFPlBXXuwis',
-    video5:'iYPmR1nV0FU',
-    video6:'W1fklW6lESw',
-    video7:'ZmUaH-n_wbA',
-    video8:'Ezf5vJgTTz0',
-    video9:'tMY2EayKUBE',
-    video10:'gIBzTZv6l3I' 
+    video1:'gIBzTZv6l3I',
+    video2:'wiPD9X43knU',
+    video3:'ytcEmtee2OE',
+    video4:'RsND0vLvw_8',
+    video5:'tIBgriXHak8',
+    video6:'qZkuyLsN3gM',
+    video7:'b9aAIY8zMpg',
+    video8:'Mv6ktjg_RPk',
+    video9:'FJdNdMOblaM',
+    video10:'e0A9nU6ce7w', 
+    video11:'heos3UtMX0s',
+    video12:'PSTOWstqJNo'
 }
 
-app.get('/api/videos/' , function (req,res){
+app.get('/api/getvideos/' , function (req,res){
     res.send(videoUrls)
 })
+
 
 
 
